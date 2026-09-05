@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      # default:"parallax". Override db or username in .env
+      POSTGRES_DB: ${POSTGRES_DB:-parallax}
+      POSTGRES_USER: ${POSTGRES_USER:-parallax}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD must be set (see .env.example)}
+    ports:
+      # host:container. Configurable via POSTGRES_PORT in .env file
+      # defaults to Postgres's standard 5432. If port 5432 already in use, override in .env
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-parallax} -d ${POSTGRES_DB:-parallax}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:
