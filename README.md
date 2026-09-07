@@ -3,7 +3,7 @@
 A pipeline for detecting flying aircraft in Sentinel-2 multispectral imagery using inter-band parallax effects, reimplementing the method of [Liu et al. (2020)](https://www.sciencedirect.com/science/article/abs/pii/S0034425720302376?via%3Dihub) with extensions.
 
 <p align="center">
-  <img src="assets/LVellage_ParallaxPlaneDetection_ExampleDetections.png" width="100%"><br>
+  <img src="https://rawcdn.githack.com/LucaVellage/parallax-plane-detection/58ed182b7304a27cdd505b77c5046e6632030d2c/assets/LVellage_ParallaxPlaneDetection_ExampleDetections.png" width="100%"><br>
   <sub><em>Parallax Plane Detection: Example Detections. © 2026 Luca Vellage</em><sub>
 </p>
 
