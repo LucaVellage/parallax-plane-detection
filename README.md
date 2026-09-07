@@ -3,8 +3,8 @@
 A pipeline for detecting flying aircraft in Sentinel-2 multispectral imagery using inter-band parallax effects, reimplementing the method of [Liu et al. (2020)](https://www.sciencedirect.com/science/article/abs/pii/S0034425720302376?via%3Dihub) with extensions.
 
 <p align="center">
-  <img src="assets/LVellage_ParallaxPlaneDetection_Example.png" width="1000"><br>
-  <em>Parallax Plane Detection: Example Detection. © 2026 Luca Vellage</em>
+  <img src="assets/LVellage_ParallaxPlaneDetection_ExampleDetections.png" width="100%"><br>
+  <sub><em>Parallax Plane Detection: Example Detections. © 2026 Luca Vellage</em><sub>
 </p>
 
 
@@ -89,6 +89,7 @@ Starts a Postgres/PostGIS container, which stores all of the pipeline's tabular 
 
 ### 3. Install the package
 
+Requires Python 3.11+. Recommended inside a virtual environment (`venv`, `conda`, etc.).
 ```bash
 pip install -e ".[notebook]"
 ```
