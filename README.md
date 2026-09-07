@@ -18,7 +18,7 @@ Step 5: Local      : (optional) ADS-B cross-reference of confirmed detections
 
 Every run is identified by a `run_id`, stored in a Postgres/PostGIS database alongside every stage's output. Re-running the pipeline for a different area or date range does not mix results and any run can be inspected, resumed, or extended later using its `run_id`.
 
-A full end-to-end demonstration of all pipeline steps is provided in `notebooks/01_pipeline_run.ipynb`. A second notebook, `notebooks/02_demo.ipynb`, runs the same pipeline end-to-end with no GEE or OpenSky account needed, using pre-supplied demo data (see "Demo Mode" below).
+A full end-to-end demonstration of all pipeline steps is provided in `notebooks/01_pipeline_run.ipynb`. A second notebook, `notebooks/02_demo.ipynb`, runs the same pipeline end-to-end with no GEE account needed, using pre-supplied demo data (see "Demo Mode" below).
 
 ## Repository Structure
 
@@ -126,21 +126,19 @@ Run `parallax --help` or `parallax run --help` for documentation.
 
 ### Via notebook
 
-`notebooks/01_pipeline_run.ipynb` runs the same stages one at a time, with an inspection/plot after each step for debugging/inspection. With GEE (and optional OpenSky) credentials, the pipeline steps can be ran with any AOI/date input.
+`notebooks/01_pipeline_run.ipynb` runs the same stages one at a time, with an inspection/plot after each step for debugging/inspection.
 
-`notebooks/02_demo.ipynb` runs the same walkthrough with no GEE or OpenSky account needed. It can only be ran with the pre-supplied data under `data/demo/`.
+`notebooks/02_demo.ipynb` runs the same walkthrough with no GEE account needed.
 
 ## Demo Mode
 
-`notebooks/02_demo.ipynb` runs the full pipeline (Steps 1-5) end-to-end with no GEE or OpenSky account. Step 1 uses pre-supplied masks, steps 3 and 5 use pre-supplied chip/ADS-B data. Step 2's filter logic, step 4's confirmation logic and the matching logic inside step 3 and 5 run unmodified. 
+`notebooks/02_demo.ipynb` runs the full pipeline (Steps 1-4) end-to-end with no GEE account needed. Step 1 uses pre-supplied masks, step 3 uses pre-supplied chip/ADS-B data. Step 2's filter logic, step 4's confirmation logic and step 3's matching logic run unmodified. Step 5 (ADS-B cross-reference) is not included in the demo run!
 
 Demo data lives under `data/demo/`:
 ```
 data/demo/
 ├── step1_masks/            ← pre-downloaded step 1 masks
 ├── step3_chip_cache/       ← pre-downloaded chips
-├── step5_adsb_cache/       ← pre-cached ADS-B parquet files
-└── tile_scan_params.csv    ← exported tile acquisition metadata
 ```
 
 ## Credentials and Authentication
@@ -223,5 +221,4 @@ No database or credentials are required.
 ## Sources
 Liu, Y., Xu, B., Zhi, W., Hu, C., Dong, Y., Jin, S., Lu, Y., Chen, T., Xu, W., Liu, Y., Zhao, B., & Lu, W. (2020). Space eye on flying aircraft: From Sentinel-2 MSI parallax to hybrid computing. Remote Sensing of Environment, 246, 111867. https://doi.org/10.1016/j.rse.2020.111867
 
-Historical ADS-B Data accessed via OpenSky Network:
 Schafer, M., Strohmeier, M., Lenders, V., Martinovic, I., & Wilhelm, M. (2014). Bringing up OpenSky: A large-scale ADS-B sensor network for research. IPSN-14 Proceedings of the 13th International Symposium on Information Processing in Sensor Networks, 83–94. https://doi.org/10.1109/IPSN.2014.6846743
