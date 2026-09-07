@@ -9,6 +9,7 @@ __pycache__/
 .DS_Store
 data/*
 !data/demo
+!data/.gitkeep
 *.parquet
 .vscode/
 .idea/
