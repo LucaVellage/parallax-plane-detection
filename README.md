@@ -1,7 +1,6 @@
 # parallax-plane-detection
 
-A pipeline for detecting flying aircraft in Sentinel-2 multispectral imagery using inter-band parallax effects, reimplementing the method of Liu et al. (2020) with extensions.
-
+A pipeline for detecting flying aircraft in Sentinel-2 multispectral imagery using inter-band parallax effects, reimplementing the method of [Liu et al. (2020)](https://www.sciencedirect.com/science/article/abs/pii/S0034425720302376?via%3Dihub) with extensions.
 
 <p align="center">
   <img src="assets/LVellage_ParallaxPlaneDetection_Example.png" width="1000"><br>
