@@ -10,9 +10,9 @@ A pipeline for detecting flying aircraft in Sentinel-2 multispectral imagery usi
 
 Developed as part of my Master's thesis in the Master of Data Science for Public Policy at the Hertie School (Berlin).
 
-📃 [View the MSc thesis poster here](assets/LVellage_ParallaxPlaneDetection_MScPoster_2026.pdf) 
+📃 [View the MSc thesis poster here](https://rawcdn.githack.com/LucaVellage/parallax-plane-detection/28db9a370f966e3bd2f5b76c053c911d266c3fb2/assets/LVellage_ParallaxPlaneDetection_MScPoster_2026.pdf) 
 
-⚙️ [View the pipeline overview here](assets/LVellage_ParallaxPlaneDetection_PipelineOverview.png) 
+⚙️ [View the pipeline overview here](https://rawcdn.githack.com/LucaVellage/parallax-plane-detection/28db9a370f966e3bd2f5b76c053c911d266c3fb2/assets/LVellage_ParallaxPlaneDetection_PipelineOverview.png) 
 
 ## Overview
 
